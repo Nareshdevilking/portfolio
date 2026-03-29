@@ -1,5 +1,3 @@
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-
 function Footer(){
   return(
 
