@@ -1,55 +1,35 @@
-import { Link } from "react-scroll";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar(){
-  return(
-    <nav className="navbar">
 
-      <div className="logo">
-        Umashankar
-      </div>
+const [menuOpen,setMenuOpen] = useState(false);
 
-      <ul className="nav-links">
+return(
 
-        <li>
-          <Link to="hero" smooth={true} duration={500} spy={true} offset={-80}>
-            Home
-          </Link>
-        </li>
+<header className="navbar">
 
-        <li>
-          <Link to="about" smooth={true} duration={500} spy={true} offset={-80}>
-            About
-          </Link>
-        </li>
+<h2 className="logo">Umashankar</h2>
 
-        <li>
-          <Link to="skills" smooth={true} duration={500} spy={true} offset={-80}>
-            Skills
-          </Link>
-        </li>
+<div className="menu-icon" onClick={()=>setMenuOpen(!menuOpen)}>
+{menuOpen ? <FaTimes/> : <FaBars/>}
+</div>
 
-        <li>
-          <Link to="services" smooth={true} duration={500} spy={true} offset={-80}>
-            Services
-          </Link>
-        </li>
+<ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
-        <li>
-          <Link to="projects" smooth={true} duration={500} spy={true} offset={-80}>
-            Projects
-          </Link>
-        </li>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
 
-        <li>
-          <Link to="contact" smooth={true} duration={500} spy={true} offset={-80}>
-            Contact
-          </Link>
-        </li>
+</ul>
 
-      </ul>
+</header>
 
-    </nav>
-  )
+)
+
 }
 
 export default Navbar
