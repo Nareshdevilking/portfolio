@@ -81,32 +81,64 @@ color:white;
 cursor:pointer;
 }
 
-/* MOBILE RESPONSIVE */
+/* ================= MOBILE SIDEBAR ================= */
 
 @media (max-width:768px){
 
 .menu-icon{
 display:block;
+font-size:36px;
+z-index:1100;
+cursor:pointer;
 }
+
+/* SIDEBAR TILE */
 
 .nav-links{
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:#020617;
+position:fixed;
+
+top:80px; /* space below navbar */
+right:-260px; /* hide outside screen */
+
+width:220px;
+height:auto;
+
+display:flex;
 flex-direction:column;
-align-items:center;
-gap:20px;
-padding:25px 0;
-display:none;
+
+gap:14px;
+padding:22px;
+
+background:rgba(2,6,23,0.95);
+backdrop-filter:blur(12px);
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.6);
+
+transition:0.35s ease;
+
+z-index:1000;
 }
+
+/* OPEN MENU */
 
 .nav-links.active{
-display:flex;
+right:20px;
+}
+
+/* LINKS */
+
+.nav-links a{
+width:100%;
+text-align:center;
+display:block;
 }
 
 }
+
 /* ================= HERO ================= */
 
 .hero{
