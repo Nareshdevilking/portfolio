@@ -529,3 +529,99 @@ width:100%;
 }
 
 }
+ 
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+
+  .navbar{
+    padding: 12px 20px;
+  }
+
+  .nav-links{
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a{
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+
+  /* HERO SECTION */
+
+  .hero{
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .hero-title{
+    font-size: 36px;
+  }
+
+  .hero-subtitle{
+    font-size: 18px;
+  }
+
+  .hero-desc{
+    font-size: 16px;
+  }
+
+  .hero-right img{
+    width: 260px;
+  }
+
+
+  /* ABOUT */
+
+  .about-container{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-card{
+    width: 100%;
+  }
+
+
+  /* SERVICES */
+
+  .services-grid{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+
+  /* SKILLS */
+
+  .skills-grid{
+    grid-template-columns: 1fr;
+  }
+
+
+  /* PROJECTS */
+
+  .project-grid{
+    grid-template-columns: 1fr;
+  }
+
+
+  /* CONTACT */
+
+  .contact-container{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .send-btn{
+    width: 100%;
+  }
+
+}
